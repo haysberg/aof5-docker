@@ -7,6 +7,8 @@ services:
   modded-mc:
     image: ghcr.io/haysberg/aof5-docker:main
     container_name: modded-mc
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     volumes:
       - /root/modmc:/data
     ports:

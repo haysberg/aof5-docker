@@ -4,20 +4,6 @@ RUN apk update && apk upgrade
 
 RUN apk add openjdk17-jre-headless
 
-RUN apk add unzip
-
-RUN mkdir /data
-
-COPY All-of-Fabric-5-Server-2.0.6.zip /data/All-of-Fabric-5-Server-2.0.6.zip
-
-RUN ls /data
-
-RUN ls /
-
-RUN unzip /data/All-of-Fabric-5-Server-2.0.6.zip
-
-RUN chmod +x /data/startserver.sh
-
 EXPOSE 25565
 
 CMD /data/startserver.sh

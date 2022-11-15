@@ -10,6 +10,10 @@ RUN mkdir /data
 
 COPY All-of-Fabric-5-Server-2.0.6.zip /data/All-of-Fabric-5-Server-2.0.6.zip
 
+RUN ls /data
+
+RUN ls /
+
 RUN unzip /data/All-of-Fabric-5-Server-2.0.6.zip
 
 RUN chmod +x /data/startserver.sh

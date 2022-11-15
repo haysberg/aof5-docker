@@ -2,7 +2,7 @@ FROM alpine:edge
 
 RUN apk update && apk upgrade
 
-RUN apk install openjdk-19-jre-headless
+RUN apk add openjdk17-jre-headless
 
 COPY All-of-Fabric-5-Server-2.0.6.zip /data
 

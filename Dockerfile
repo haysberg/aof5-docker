@@ -2,7 +2,7 @@ FROM alpine:edge
 
 RUN apk update && apk upgrade
 
-RUN apk add openjdk8-jre-headless
+RUN apk add openjdk8-jre
 
 WORKDIR /data
 

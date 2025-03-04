@@ -34,16 +34,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+      - name: Build and push JRE 17
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          dockerfile: Dockerfile.jre17
+          tags: haysberg/javamc-docker:java17
+      
+      - name: Build and push JRE 21
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          dockerfile: Dockerfile.jre21
+          tags: haysberg/javamc-docker:java21

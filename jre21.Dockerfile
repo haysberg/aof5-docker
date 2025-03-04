@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk update && apk upgrade && apk install 
+RUN apk update && apk upgrade 
 
 RUN apk add openjdk21-jre-headless bash
 

@@ -40,7 +40,6 @@ jobs:
       - name: Build and push JRE 17
         uses: docker/build-push-action@v6
         with:
-          context: .
           push: true
           dockerfile: ./Dockerfile.jre17
           tags: haysberg/javamc-docker:java17
@@ -48,7 +47,6 @@ jobs:
       - name: Build and push JRE 21
         uses: docker/build-push-action@v6
         with:
-          context: .
           push: true
           dockerfile: ./Dockerfile.jre21
           tags: haysberg/javamc-docker:java21

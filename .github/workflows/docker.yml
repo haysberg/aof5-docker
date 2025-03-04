@@ -44,7 +44,7 @@ jobs:
         with:
           context: .
           push: true
-          dockerfile: ./jre17.Dockerfile
+          file: ./jre17.Dockerfile
           tags: haysberg/javamc-docker:java17
       
       - name: Build and push JRE 21
@@ -52,5 +52,5 @@ jobs:
         with:
           context: .
           push: true
-          dockerfile: ./jre21.Dockerfile
+          file: ./jre21.Dockerfile
           tags: haysberg/javamc-docker:java21

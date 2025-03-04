@@ -9,6 +9,4 @@ ENV SHELL=/bin/bash
 WORKDIR /data
 
 EXPOSE 25565
-
-ENTRYPOINT ["/bin/bash", "-c"]
 CMD /data/startserver.sh

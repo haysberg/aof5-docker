@@ -1,5 +1,7 @@
 # aof5-docker
 
+Useful to run docker containers with modpacks
+
 ```
 ---
 version: "2.1"

@@ -37,7 +37,7 @@ jobs:
         run: ls -la
       
       - name: List files in the repository
-        run: ls ./Dockerfile*
+        run: ls ./jre*
 
       - name: Build and push JRE 17
         uses: docker/build-push-action@v6

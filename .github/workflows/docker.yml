@@ -10,6 +10,7 @@ on:
     branches: ['main', 'develop']
   schedule: 
     - cron: '0 0 * * 1'
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io

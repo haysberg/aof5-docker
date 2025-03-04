@@ -26,7 +26,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
@@ -36,10 +35,14 @@ jobs:
 
       - name: List files in the repository
         run: ls -la
+      
+      - name: List files in the repository
+        run: ls ./Dockerfile*
 
       - name: Build and push JRE 17
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
           dockerfile: ./Dockerfile.jre17
           tags: haysberg/javamc-docker:java17
@@ -47,6 +50,7 @@ jobs:
       - name: Build and push JRE 21
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
           dockerfile: ./Dockerfile.jre21
           tags: haysberg/javamc-docker:java21
